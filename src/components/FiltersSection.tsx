@@ -19,6 +19,7 @@ export default function FiltersSection({ filters, onFiltersChange }: FiltersSect
     category: true,
     subCategory: true,
   });
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => ({
@@ -64,16 +65,29 @@ export default function FiltersSection({ filters, onFiltersChange }: FiltersSect
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
+    <div>
+      {/* Mobile Filters Toggle Button */}
+      <div className="lg:hidden mb-4">
         <button
-          onClick={clearAllFilters}
-          className="text-blue-600 text-sm hover:text-blue-700"
+          onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+          className="w-full flex items-center justify-between bg-white p-4 rounded-lg shadow-sm border"
         >
-          Clear All
+          <span className="font-medium text-gray-900">Filters</span>
+          <ChevronDownIcon className={`w-4 h-4 transition-transform ${mobileFiltersOpen ? 'rotate-180' : ''}`} />
         </button>
       </div>
+
+      {/* Filters Content */}
+      <div className={`bg-white p-6 rounded-lg shadow-sm ${mobileFiltersOpen ? 'block' : 'hidden lg:block'}`}>
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
+          <button
+            onClick={clearAllFilters}
+            className="text-blue-600 text-sm hover:text-blue-700"
+          >
+            Clear All
+          </button>
+        </div>
 
       {/* Business Type */}
       <div className="mb-6">
@@ -188,6 +202,7 @@ export default function FiltersSection({ filters, onFiltersChange }: FiltersSect
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 }

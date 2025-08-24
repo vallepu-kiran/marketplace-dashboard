@@ -84,9 +84,9 @@ export default function HomePage() {
       <HeroBanner />
       
       <div className="max-w-7xl mx-auto px-4 py-6">
-        <div className="flex gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Sidebar - Filters */}
-          <div className="w-64 flex-shrink-0">
+          <div className="w-full lg:w-64 flex-shrink-0">
             <FiltersSection
               filters={filters}
               onFiltersChange={handleFilterChange}
@@ -96,7 +96,7 @@ export default function HomePage() {
           {/* Main Content - Product Grid */}
           <div className="flex-1">
             <div className="mb-6">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex flex-wrap items-center gap-2 mb-4">
                 <button className="px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium">
                   Products
                 </button>
@@ -109,13 +109,13 @@ export default function HomePage() {
                 <span className="text-blue-600 font-medium">Showing Result for:</span> latest equipment planning and design
               </div>
 
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="relative">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full sm:w-auto">
+                  <div className="relative w-full sm:w-auto">
                     <input
                       type="text"
                       placeholder="Search"
-                      className="px-4 py-2 border border-gray-300 rounded text-sm pr-10"
+                      className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded text-sm pr-10"
                       value={filters.search}
                       onChange={(e) => handleSearch(e.target.value)}
                     />
@@ -123,7 +123,7 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </div>
-                  <select className="px-4 py-2 border border-gray-300 rounded text-sm bg-white">
+                  <select className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded text-sm bg-white">
                     <option>Latest</option>
                     <option>Price: Low to High</option>
                     <option>Price: High to Low</option>
