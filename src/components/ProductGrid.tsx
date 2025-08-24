@@ -21,7 +21,7 @@ export default function ProductGrid({
 }: ProductGridProps) {
   if (loading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {Array.from({ length: 8 }).map((_, index) => (
           <div key={index} className="bg-white rounded-lg shadow-sm border animate-pulse">
             <div className="h-48 bg-gray-200 rounded-t-lg"></div>
@@ -65,7 +65,7 @@ export default function ProductGrid({
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
         {products.map((product, index) => (
           <div key={product.id} className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
             {/* Product Image */}

@@ -29,12 +29,11 @@ export default function TrustedClients() {
             {clients.map((client, index) => (
               <div
                 key={client.name}
-                className="flex items-center justify-center w-32 h-24 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-w-20 max-h-16 object-contain filter grayscale hover:grayscale-0 transition-all"
+                  className="max-w-40 max-h-30 object-contain filter grayscale hover:grayscale-0 transition-all"
                   onError={(e) => {
                     // Fallback to text if logo doesn't load
                     const target = e.target as HTMLImageElement;

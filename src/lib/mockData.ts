@@ -232,3 +232,5 @@ export const getProducts = (filters: ProductFilters = {}): ApiResponse<Product[]
 export const getProductById = (id: string): Product | null => {
   return mockProducts.find(p => p.id === id) || null;
 };
+
+export { Product };

@@ -23,9 +23,18 @@ export default function Header({ onSearch }: HeaderProps) {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-blue-600 tracking-wider">
-                iPROCURE
-              </div>
+              <img 
+                src="/image 3.png" 
+                alt="iPROCURE" 
+                className="h-8 w-auto"
+                onError={(e) => {
+                  // Fallback to text if logo doesn't load
+                  const parent = e.currentTarget.parentElement;
+                  if (parent) {
+                    parent.innerHTML = '<div class="text-2xl font-bold text-blue-600 tracking-wider">iPROCURE</div>';
+                  }
+                }}
+              />
             </div>
 
             {/* Search Bar */}

@@ -1,0 +1,12 @@
+<svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- iPROCURE Logo -->
+  <g>
+    <!-- Arrow/Triangle symbol -->
+    <path d="M8 12 L14 16 L8 20 L10 16 Z" fill="#2563eb"/>
+    
+    <!-- iPROCURE Text -->
+    <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#2563eb" letter-spacing="0.5px">
+      iPROCURE
+    </text>
+  </g>
+</svg>

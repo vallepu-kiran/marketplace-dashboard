@@ -14,8 +14,8 @@ export default function HeroBanner() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
         <div className="flex items-center">
-          <div className="flex-1 pr-8 max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <div className="flex-1 pr-8 max-w-5xl">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
               Durable Construction: The 3M 6200 half face respirator,<br />
               ensuring a durable and long-lasting product.
             </h1>
@@ -25,8 +25,7 @@ export default function HeroBanner() {
           </div>
         </div>
       </div>
-      
-      {/* Decorative geometric elements */}
+    
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute top-10 right-32 w-24 h-24 border border-white rotate-45"></div>
         <div className="absolute bottom-20 left-32 w-16 h-16 border border-white rotate-12"></div>
